@@ -1,0 +1,26 @@
+(ocamllex lexer_default)
+(ocamllex lexer_unicode_merged)
+(ocamllex lexer_specialized)
+
+
+(executable
+ (name test1)
+ (modules test1 lexer_default)
+ (flags (:standard -w -9))
+ (libraries lib)
+)
+
+(executable
+ (name test2)
+ (modules test2 lexer_unicode_merged)
+ (flags (:standard -w -9))
+ (libraries lib)
+)
+
+
+(executable
+ (name test3)
+ (modules test3 lexer_specialized)
+ (flags (:standard -w -9))
+ (libraries lib)
+)
